@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WooJinPay</string>
+    <string name="kakao_app_key">6260b2c62f0a2877cf037d1df65c6ae0</string>
+    <string name="title_activity_section_main">section_main</string>
+    <string name="title_home">상품</string>
+    <string name="title_shoppingcart">장바구니</string>
+    <string name="title_setting">설정</string>
+
+</resources>
