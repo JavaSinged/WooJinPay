@@ -1,19 +1,33 @@
-package com.example.sinjiung.woojinpay;
+package com.example.sinjiung.woojinpay.BottomNaviBar;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
+import android.view.inputmethod.InputMethod;
+import android.view.inputmethod.InputMethodSession;
+import android.widget.Toast;
 
+import com.example.sinjiung.woojinpay.Login.MainActivity;
+import com.example.sinjiung.woojinpay.R;
+import com.kakao.auth.ISessionCallback;
+import com.kakao.auth.Session;
+import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
+import com.kakao.usermgmt.callback.UnLinkResponseCallback;
+import com.kakao.util.exception.KakaoException;
+import com.kakao.util.helper.log.Logger;
+
+import javax.security.auth.callback.Callback;
 
 public class section_main extends AppCompatActivity {
 
@@ -21,11 +35,11 @@ public class section_main extends AppCompatActivity {
     shoppingcart shoppingcartFragment;
     setting settingFragment;
     ActionBar bar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_main);
+
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -43,6 +57,16 @@ public class section_main extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actionbar_actions, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logoutMenu:
+                onClickLogout();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -78,18 +102,9 @@ public class section_main extends AppCompatActivity {
     }
 
     protected void firstdirectSignupActivity() {
-        onClickLogout();
         final Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
-
-    protected void redirectSignupActivity() {
-        onClickLogout();
-        final Intent intent = new Intent(this, section_main.class);
-        startActivity(intent);
-        finish();
-    }
-
 
 }

@@ -1,4 +1,4 @@
-package com.example.sinjiung.woojinpay;
+package com.example.sinjiung.woojinpay.BottomNaviBar;
 
 
 import android.content.Context;
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.sinjiung.woojinpay.R;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.UnLinkResponseCallback;
@@ -41,12 +42,6 @@ public class setting extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_setting, container, false);
         View view = inflater.inflate(R.layout.fragment_setting,container,false);
-        logout = (Button) view.findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
         return rootView;
     }
 

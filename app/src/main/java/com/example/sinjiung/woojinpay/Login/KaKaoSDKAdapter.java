@@ -1,4 +1,4 @@
-package com.example.sinjiung.woojinpay;
+package com.example.sinjiung.woojinpay.Login;
 
 import android.content.Context;
 

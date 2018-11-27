@@ -1,13 +1,18 @@
-package com.example.sinjiung.woojinpay;
+package com.example.sinjiung.woojinpay.Login;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+
+import com.example.sinjiung.woojinpay.R;
+import com.example.sinjiung.woojinpay.BottomNaviBar.section_main;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
@@ -20,42 +25,32 @@ import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
     private SessionCallback callback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
         Session.getCurrentSession().checkAndImplicitOpen();
 
-        Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
+        Button unlinkBtn = (Button) findViewById(R.id.unLinkBTN);
+        unlinkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickLogout();
                 onClickUnlink();
             }
         });
 
     }
 
-    public void logoutF(){
-        onClickLogout();
-        onClickUnlink();
-    }
 
     protected void redirectSignupActivity() {
         final Intent intent = new Intent(this, section_main.class);
-        startActivity(intent);
-        finish();
-    }
-
-    protected void firstdirectSignupActivity() {
-        final Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
@@ -108,29 +103,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private class SessionCallbackA implements ISessionCallback {
-
-        @Override
-        public void onSessionOpened() {
-            request();
-        }
-
-        @Override
-        public void onSessionOpenFailed(KakaoException exception) {
-            Log.d("error", "Session Fail Error is " + exception.getMessage().toString());
-        }
-    }
-
     public class SessionCallbackImpl extends SessionCallback { }
 
-    private void onClickLogout() {
-        UserManagement.getInstance().requestLogout(new LogoutResponseCallback() {
-            @Override
-            public void onCompleteLogout() {
-                firstdirectSignupActivity();
-            }
-        });
-    }
 
     private void onClickUnlink() {
         final String appendMessage = getString(R.string.com_kakao_confirm_unlink);
@@ -148,17 +122,14 @@ public class MainActivity extends AppCompatActivity {
 
                                     @Override
                                     public void onSessionClosed(ErrorResult errorResult) {
-                                        firstdirectSignupActivity();
                                     }
 
                                     @Override
                                     public void onNotSignedUp() {
-                                       firstdirectSignupActivity();
                                     }
 
                                     @Override
                                     public void onSuccess(Long userId) {
-                                        firstdirectSignupActivity();
                                     }
                                 });
                                 dialog.dismiss();
@@ -172,5 +143,6 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }).show();
     }
+
 }
 

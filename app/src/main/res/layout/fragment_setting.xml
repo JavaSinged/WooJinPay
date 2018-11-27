@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".setting">
+    tools:context=".BottomNaviBar.setting">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -11,10 +11,5 @@
         android:layout_height="match_parent"
         android:text="설정화면" />
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="로그아웃" />
 
 </FrameLayout>
