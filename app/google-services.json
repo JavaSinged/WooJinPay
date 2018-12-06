@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "961934016539",
+    "firebase_url": "https://woojin-fa3a8.firebaseio.com",
+    "project_id": "woojin-fa3a8",
+    "storage_bucket": "woojin-fa3a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961934016539:android:4c22d6bc2a19abad",
+        "android_client_info": {
+          "package_name": "com.example.sinjiung.woojinpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961934016539-ue0qrdhh7j9fve0oddmed6e1bdj2q5e9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sinjiung.woojinpay",
+            "certificate_hash": "4893b77ced1db79f5ee06aa53d2179ae3f9532d8"
+          }
+        },
+        {
+          "client_id": "961934016539-mt9n2af5lb307dqtkb5dl0776lqvcrkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfXFSaCmZv-Zc3suySgIEp41yEiWcxCA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961934016539-mt9n2af5lb307dqtkb5dl0776lqvcrkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

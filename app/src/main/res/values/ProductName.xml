@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="productName">
+        <item>실리카 겔 1g</item>
+        <item>실리카 겔 2g</item>
+        <item>실리카 겔 5g</item>
+    </string-array>
+
+</resources>

@@ -25,7 +25,8 @@
         </activity>
         <activity
             android:name=".BottomNaviBar.section_main"
-            android:label="@string/title_activity_section_main"></activity>
+            android:label="@string/title_activity_section_main" />
+        <activity android:name=".Product.Popup"></activity>
     </application>
 
 </manifest>
