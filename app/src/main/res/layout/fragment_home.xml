@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_vertical|fill_horizontal|center"
-    tools:context=".BottomNaviBar.home">
+    tools:context=".BottomNaviBar.home"
+    android:background="#fff">
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/productCase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:scrollbars="vertical">
-
-    </android.support.v7.widget.RecyclerView>
-
+        android:layout_margin="3dp"
+        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
 </FrameLayout>
