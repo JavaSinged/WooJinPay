@@ -1,12 +1,12 @@
-package com.example.sinjiung.woojinpay.Product;
+package com.example.sinjiung.woojinpay.ShoppingCart;
 
-public class Item {
+public class AddItem {
 
     String title;
     String url;
     String price;
 
-    public Item(String url, String title, String price) {
+    public AddItem(String url, String title, String price) {
         this.title = title;
         this.url = url;
         this.price=price;

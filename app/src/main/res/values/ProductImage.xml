@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="productImage">
-        <item>https://firebasestorage.googleapis.com/v0/b/woojin-fa3a8.appspot.com/o/product%2F1.jpeg?alt=media&amp;token=2b06faa2-a939-4cba-b4e4-ea1438a3b4a1</item>
-        <item>https://firebasestorage.googleapis.com/v0/b/woojin-fa3a8.appspot.com/o/product%2F2.jpeg?alt=media&amp;token=37a9b819-41bb-4160-9619-db389071ac6e</item>
-        <item>https://firebasestorage.googleapis.com/v0/b/woojin-fa3a8.appspot.com/o/product%2FKakaoTalk_20180123_232540531.jpg?alt=media&amp;token=33415c76-59da-4648-ac6f-6c9e83dba5f8</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/woojin-fa3a8.appspot.com/o/product%2F1g.jpg?alt=media&amp;token=1b90d306-4757-4a43-b198-4a70351b4a54</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/woojin-fa3a8.appspot.com/o/product%2F2g.jpg?alt=media&amp;token=5330fd33-ebb6-437a-9f9b-3f785c06a4ac</item>
     </string-array>
 
     <string-array name="productPrice">
